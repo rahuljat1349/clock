@@ -79,16 +79,13 @@
             let h = a.getHours()
             let m = a.getMinutes()
             let s = a.getSeconds()
-            let d = a.getDay()
-            let d2 = a.getDate()
-            let m2 = a.getMonth()
-            let y = a.getFullYear()
+            let d = a.toDateString()            
 
             let time = document.getElementById("time")
             let date = document.getElementById("p")
 
             time.innerHTML = h + ":" + m + ":" + s
-            date.innerHTML = days[d] + ',' + '&nbsp  ' + months[m2] + '&nbsp ' + d2 + ',' + ' &nbsp' + y
+            date.innerHTML = d
             console.log(d)
         }
         setInterval(time, 0)
